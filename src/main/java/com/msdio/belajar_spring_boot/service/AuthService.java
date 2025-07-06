@@ -5,7 +5,7 @@ import com.msdio.belajar_spring_boot.model.LoginUserRequest;
 import com.msdio.belajar_spring_boot.model.TokenResponse;
 import com.msdio.belajar_spring_boot.repository.UserRepository;
 import com.msdio.belajar_spring_boot.security.BCrypt;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

@@ -6,7 +6,7 @@ import com.msdio.belajar_spring_boot.model.UpdateUserRequest;
 import com.msdio.belajar_spring_boot.model.UserResponse;
 import com.msdio.belajar_spring_boot.repository.UserRepository;
 import com.msdio.belajar_spring_boot.security.BCrypt;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Validator;

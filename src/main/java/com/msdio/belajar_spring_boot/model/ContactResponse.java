@@ -5,15 +5,22 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class WebResponse<T> {
+public class ContactResponse {
 
-    private T data;
+    private UUID id;
 
-    private String errors;
+    private String firstName;
 
-    private PagingResponse paging;
+    private String lastName;
+
+    private String email;
+
+    private String phone;
+
 }
