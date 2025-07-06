@@ -31,6 +31,7 @@ public class AuthService {
         if(BCrypt.checkpw(request.getPassword(), user.getPassword())) {
             user.setToken(UUID.randomUUID().toString());
             user.setTokenExpiredAt(next30Days());
+            userRepository.save(user);
 
             return TokenResponse.builder()
                     .token(user.getToken())

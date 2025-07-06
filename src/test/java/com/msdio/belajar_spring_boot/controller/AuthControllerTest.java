@@ -117,10 +117,8 @@ public class AuthControllerTest {
             User userDB = userRepository.findById("test").orElse(null);
 
             assertNotNull(userDB);
-            assertNotNull(response.getData().getToken());
-            assertNotNull(response.getData().getExpiredAt());
-
-
+            assertNotNull(userDB.getToken());
+            assertNotNull(userDB.getTokenExpiredAt());
 
         });
     }
